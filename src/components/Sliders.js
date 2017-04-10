@@ -17,7 +17,7 @@ class Sliders extends Component {
         <SliderBar alter={this.props.alter} name='saturation' max='100' value={this.props.saturation} />
       </div>
       <div className='label'>
-        <span className='lightValueLabel'>Light</span>
+        <span className='lightValueLabel'>Lightness</span>
       </div>
       <div>
         <SliderBar alter={this.props.alter} name='lightness' max='100' value={this.props.lightness} />
