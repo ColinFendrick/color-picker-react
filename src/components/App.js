@@ -15,10 +15,10 @@ class App extends Component {
     if (name === 'hue') {
       this.setState({hue: Number(e)})
     }
-    if (name === 'sat') {
+    if (name === 'saturation') {
       this.setState({saturation: Number(e)})
     }
-    if (name === 'light') {
+    if (name === 'lightness') {
       this.setState({lightness: Number(e)})
     }
     if (name === 'alpha') {

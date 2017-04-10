@@ -1,48 +1,34 @@
 import React, { Component } from 'react'
+import SliderBar from './SliderBar.js'
 
 class Sliders extends Component {
-  _changeHue = (e) => {
-    this.props.alter(e.target.value, 'hue')
-  }
-
-  _changeSat = (e) => {
-    this.props.alter(e.target.value, 'sat')
-  }
-
-  _changeLight = (e) => {
-    this.props.alter(e.target.value, 'light')
-  }
-
-  _changeAlpha = (e) => {
-    this.props.alter(e.target.value, 'alpha')
-  }
-
   render () {
     return <div className='labelContainer'>
       <div className='label'>
         <span className='hueValueLabel'>Hue</span>
       </div>
       <div>
-        <input name='hue' type='range' min='0' max='360' value={this.props.hue} onChange={this._changeHue} onInput={this._changeHue} />
+        <SliderBar alter={this.props.alter} name='hue' max='360' value={this.props.hue} />
       </div>
       <div className='label'>
         <span className='satValueLabel'>Saturation</span>
       </div>
       <div>
-        <input name='sat' type='range' min='0' max='100' value={this.props.saturation} onChange={this._changeSat} onInput={this._changeSat} />
+        <SliderBar alter={this.props.alter} name='saturation' max='100' value={this.props.saturation} />
       </div>
       <div className='label'>
         <span className='lightValueLabel'>Light</span>
       </div>
       <div>
-        <input name='light' type='range' min='0' max='100' value={this.props.lightness} onChange={this._changeLight} onInput={this._changeLight} />
+        <SliderBar alter={this.props.alter} name='lightness' max='100' value={this.props.lightness} />
       </div>
       <div className='label'>
         <span className='alphaValueLabel'>Alpha</span>
       </div>
       <div>
-        <input name='alpha' type='range' min='0' max='1' step='0.01' value={this.props.alpha} onChange={this._changeAlpha} onInput={this._changeAlpha} />
+        <SliderBar alter={this.props.alter} name='alpha' max='1' step='0.01' value={this.props.alpha} />
       </div>
+
     </div>
   }
 }
