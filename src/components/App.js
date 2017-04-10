@@ -5,7 +5,7 @@ import ValueList from './ValueList.js'
 
 class App extends Component {
   state = {
-    hue: 0,
+    hue: 180,
     saturation: 50,
     lightness: 50,
     alpha: 0.5
